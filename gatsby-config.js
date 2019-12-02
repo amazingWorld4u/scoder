@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
+    title: `Scoder`,
     author: `Kyle Matthews`,
     description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
@@ -9,6 +9,7 @@ module.exports = {
       twitter: `kylemathews`,
     },
   },
+  pathPrefix: "/scoder",
   plugins: [
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-styled-components`,
@@ -21,6 +22,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/fonts`,
+        name: `fonts`,
       },
     },
     {

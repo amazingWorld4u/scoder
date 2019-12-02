@@ -1,0 +1,289 @@
+.list{
+    /* width : 100vw;
+    display: flex;
+    flex-direction: column; */
+}
+.parent{
+    /* background: rgb(0, 26, 22); */
+/* background: linear-gradient(166deg, rgba(131,58,180,1) 5%, rgba(131,58,180,1) 16%, rgba(29,253,163,1) 50%, rgba(69,104,252,1) 85%); */
+}
+/* .blogItem{
+    background-color: rgb(137, 226, 78);
+    width : 60vw;
+    border-radius: 20px;
+    padding : 10px;
+    margin : 10px
+} */
+.visibleSideNav{
+    position : fixed;
+    height : 100%;
+    width : 70vw;
+    background-color : rgb(19, 81, 105);
+    top : 0;
+    z-index: 1; 
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), -2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: showSideNav;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+.hideSideNav{
+    position : fixed;
+    height : 100%;
+    width : 70vw;
+    background-color : rgb(19, 81, 105);
+    top : 0;
+    z-index: 1; 
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), -2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: hideSideNav;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 800px) {
+    .blogItemsContainer{
+        /* display: flex; */
+        flex : 1;
+        align-items: center;
+        justify-content: center;
+        /* background-color: blue; */
+        /* margin-left : 30px; */
+        margin : 0px;
+    }
+    .blogItem {
+      background-color: lightblue;
+      width : 90vw;
+      /* padding : 10px; */
+      margin : 10px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), -2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+      display: flex;
+      flex-direction: column;
+    }
+    .headerContainer{
+        padding-top : 10px;
+        padding-bottom : 10px;
+        background-color : rgb(255, 125, 125);
+    }
+    .navContainer{
+        /* visibility: hidden; */
+        background-color: gray;
+        display: none;
+    }
+    .navItem{
+        display: none;
+    }
+    .headerTitle{
+        /* background-color: red; */
+        margin : 0px;
+        flex : 1;
+        padding-left: 10px;
+    }
+    .headerContainer1{
+        display: flex;
+        margin : 0px;
+        padding : 0px;
+    }
+    .menuIcon{
+        color : white;
+        size: 30;
+        vertical-align: bottom;
+        /* padding-left : 5px; */
+        /* padding-right : 10px; */
+    }
+    .menuIconContainer{
+        padding-left : 10px;
+        padding-right : 10px;
+        /* vertical-align: bottom; */
+        /* background-color: red; */
+    }
+    .sideNav{
+        display: none;
+        position : fixed;
+        height: 100%;
+        left : -300px;
+        /* position : fixed;
+        height : 100%;
+        width : 300px;
+        background-color : rgb(30, 151, 101);
+        top : 0;
+        z-index: 1; 
+        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), -2px 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    }
+  }
+@media only screen and (min-width: 800px) {
+.blogItemsContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: red; */
+}
+.blogItem {
+    background-color: rgb(135, 206, 228);
+    width : 25vw;
+    /* padding : 10px; */
+    /* height: 250px; */
+    margin : 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), -2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    /* align-items: inherit; */
+    /* flex : 1; */
+    /* box-shadow: 1px 1px 2px 1px gray; */
+}
+.menuIcon{
+    display: none;
+}
+.sideNav{
+    display: none;
+}
+.visibleSideNav{
+    display: none;
+}
+
+
+}
+@media only screen and (max-width: 800px) and (min-width:500px) {
+    .blogItem{
+        width : 80vw;
+        align-self : center;
+    }
+    .blogItemsContainer{
+        /* background-color: green; */
+        display: flex;
+        flex : 1;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+}
+.blogItem:hover{
+    background-color : lightgreen;
+    /* box-shadow: 5px 5px 3px 1px rgba(230,230,230,0.8); */
+    /* box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2), -2px 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    color : white;
+    animation-name: colTrans;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.blogItemTitle{
+    color : white;
+    /* boxShadow: none; */
+    font : bold 14px Montserrat;
+}
+.blogItemTitleContainer{
+    color : white;
+    margin : 0px;
+    margin-left : 40px;
+    margin-right : 40px;
+    position : relative;
+    top : -25px;
+    background-color : lightgreen;
+    /* // alignSelf : 'center', */
+    padding : 5px;
+    border-radius : 20px;
+    text-decoration : none;
+}
+.blogItemTitleContainer:hover{
+    background-color: rgb(87, 55, 226);
+}
+.blogItemDate{
+    color :white;
+    font : bold 10px Montserrat;
+}
+@keyframes colTrans{
+    from{
+        background-color: lightgreen;
+    }
+    to{
+        background-color: lightpink;
+    }
+}
+@keyframes showSideNav{
+    from{
+        /* width : 0px; */
+        left : -70vw;
+    }
+    to{
+        /* width : 200px; */
+        left : 0vw;
+    }
+}
+@keyframes hideSideNav{
+    from{
+        left : 0vw;
+    }
+    to{
+        left : -70vw;
+    }
+}
+
+
+/* header     */
+
+
+.headerContainer{
+    padding-top : 20px;
+    padding-bottom: 20px;
+    background-color : rgb(206, 86, 86);
+}
+.headerContainer1{
+    display : flex;
+    align-items : center;
+    justify-content : space-around;
+}
+.headerTitle{
+    margin : 0;
+    color : white;
+}
+.navContainer{
+    display : flex;
+    font : lighter 20px Montserrat;
+}
+.navItem{
+    color : white;
+    padding : 10px;
+    margin : 0px;
+    /* background-color: white; */
+    font-weight: bolder;
+    font-size: 14px;
+    /* flex : 1; */
+}
+.navItem:hover{
+    color : rgb(118, 252, 198);
+    flex : 1;
+    cursor: pointer;
+    font: bold 14px Montserrat;
+    /* font : 500 Montserrat; */
+}
+.menuIconContainer{
+    cursor: pointer;
+}
+.blogItemImage{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin : 0px;
+    height: 200px;
+}
+
+.sideNavItem{
+    text-align: center;
+    /* font: bold 18px Montserrat; */
+    color : white;
+    padding : 10px;
+    margin : 0px;
+    /* background-color: white; */
+    font-weight: bolder;
+    font-size: 14px;
+    font : normal 15px Montserrat;
+}
+.sideNavItem:hover{
+    background-color: lightsalmon;
+    cursor: pointer;
+    font : bolder 15px Montserrat;
+}
+#nav{
+    display: none;
+}
